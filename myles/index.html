@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<style>[hidden]{display:none!important}</style>
+<title>7th Grade STEM Day</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{
+--page:#edf2e6;--grid:rgba(66,112,62,.085);--grid-major:rgba(66,112,62,.14);
+--sheet:#fbfcf8;--sheet-2:#f1f5eb;
+--ink:#17201a;--ink-2:#435248;--muted:#5d6c62;
+--rule:#d5ddcc;--rule-strong:#b7c4ad;--rest:#dde4d5;
+--alg-1:#75bbec;--alg-2:#219ce0;--alg-3:#1779af;--alg-4:#0e5881;
+--geo-1:#d6ad68;--geo-2:#bb881d;--geo-3:#926914;--geo-4:#6b4c0c;
+--phy-1:#9a91d5;--phy-2:#7b67cc;--phy-3:#5d41b1;--phy-4:#402584;
+--chem-1:#d28376;--chem-2:#c35141;--chem-3:#a52014;--chem-4:#740f06;
+--bio-1:#82c38f;--bio-2:#3eab5e;--bio-3:#188841;--bio-4:#0f632e;
+--eng-1:#e09bc8;--eng-2:#cd6aaf;--eng-3:#ae4090;--eng-4:#84266c;
+--alg:var(--alg-3);--geo:var(--geo-3);--phy:var(--phy-3);--chem:var(--chem-3);--bio:var(--bio-3);--eng:var(--eng-3);
+--hl:#ffe45c;--hl-ink:#1b1904;--hl-wash:#fff4b8;
+--good:#0ca30c;--warn:#fab219;--crit:#d03b3b;
+--font-body:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+--font-display:"Barlow Condensed","Arial Narrow","Roboto Condensed",system-ui,sans-serif;
+--font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]){
+color-scheme:dark;
+--page:#131c17;--grid:rgba(210,230,216,.04);--grid-major:rgba(210,230,216,.07);
+--sheet:#1c2822;--sheet-2:#223029;
+--ink:#e7eee8;--ink-2:#bac8bd;--muted:#93a397;
+--rule:#314138;--rule-strong:#46594c;--rest:#34463b;
+--alg-1:#197cb3;--alg-2:#219ce0;--alg-3:#5abbfa;--alg-4:#a6d8fc;
+--geo-1:#966c15;--geo-2:#bb881d;--geo-3:#dfa635;--geo-4:#f7c97b;
+--phy-1:#584995;--phy-2:#7561c5;--phy-3:#9281e1;--phy-4:#b0a5f2;
+--chem-1:#8f382d;--chem-2:#bc4a3c;--chem-3:#da6d5d;--chem-4:#ef9687;
+--bio-1:#36884d;--bio-2:#3eab5e;--bio-3:#68ca80;--bio-4:#9ce6ab;
+--eng-1:#a2568a;--eng-2:#cd6aaf;--eng-3:#eb8ccd;--eng-4:#fcb9e5;
+--alg:var(--alg-2);--geo:var(--geo-2);--phy:var(--phy-2);--chem:var(--chem-2);--bio:var(--bio-2);--eng:var(--eng-2);
+--hl:#ecd24e;--hl-ink:#1a1804;--hl-wash:#3b3a1c;
+}
+}
+:root[data-theme="dark"]{
+color-scheme:dark;
+--page:#131c17;--grid:rgba(210,230,216,.04);--grid-major:rgba(210,230,216,.07);
+--sheet:#1c2822;--sheet-2:#223029;
+--ink:#e7eee8;--ink-2:#bac8bd;--muted:#93a397;
+--rule:#314138;--rule-strong:#46594c;--rest:#34463b;
+--alg-1:#197cb3;--alg-2:#219ce0;--alg-3:#5abbfa;--alg-4:#a6d8fc;
+--geo-1:#966c15;--geo-2:#bb881d;--geo-3:#dfa635;--geo-4:#f7c97b;
+--phy-1:#584995;--phy-2:#7561c5;--phy-3:#9281e1;--phy-4:#b0a5f2;
+--chem-1:#8f382d;--chem-2:#bc4a3c;--chem-3:#da6d5d;--chem-4:#ef9687;
+--bio-1:#36884d;--bio-2:#3eab5e;--bio-3:#68ca80;--bio-4:#9ce6ab;
+--eng-1:#a2568a;--eng-2:#cd6aaf;--eng-3:#eb8ccd;--eng-4:#fcb9e5;
+--alg:var(--alg-2);--geo:var(--geo-2);--phy:var(--phy-2);--chem:var(--chem-2);--bio:var(--bio-2);--eng:var(--eng-2);
+--hl:#ecd24e;--hl-ink:#1a1804;--hl-wash:#3b3a1c;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+margin:0;color:var(--ink);background-color:var(--page);
+background-image:
+linear-gradient(var(--grid-major) 1px,transparent 1px),
+linear-gradient(90deg,var(--grid-major) 1px,transparent 1px),
+linear-gradient(var(--grid) 1px,transparent 1px),
+linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+background-size:120px 120px,120px 120px,24px 24px,24px 24px;
+font:16px/1.5 var(--font-body);
+-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--ink);text-underline-offset:2px}
+a:focus-visible{outline:2px solid var(--ink);outline-offset:2px;border-radius:2px}
+.wrap{max-width:1100px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:28px 64px;display:grid;gap:18px}
+.lbl{font-family:var(--font-display);font-weight:600;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:clamp(14px,2.6vw,24px);min-width:0}
+.sh{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
+.sh h2,.h2{font-family:var(--font-display);font-weight:700;font-size:21px;letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
+.note{color:var(--muted);font-size:14.5px;margin-top:6px;max-width:70ch}
+.note b{color:var(--ink-2)}
+[data-s="alg"]{--gc:var(--alg)}
+[data-s="geo"]{--gc:var(--geo)}
+[data-s="phy"]{--gc:var(--phy)}
+[data-s="chem"]{--gc:var(--chem)}
+[data-s="bio"]{--gc:var(--bio)}
+[data-s="eng"]{--gc:var(--eng)}
+.stg{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:-1px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;background:var(--gc);flex:none}
+.tag{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.04em;line-height:19px;padding:0 5px;border:1.5px solid var(--ink);border-radius:3px;color:var(--ink);flex:none}
+.now-tag{display:inline-block;font-family:var(--font-display);font-weight:700;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;line-height:17px;padding:0 6px;border-radius:3px;background:var(--hl);color:var(--hl-ink);vertical-align:1px}
+
+/* masthead */
+.mast{display:grid;gap:18px;padding-block:4px}
+@media (min-width:880px){.mast{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);align-items:end}}
+h1{font-family:var(--font-display);font-weight:700;font-size:clamp(38px,5.6vw,58px);line-height:.96;letter-spacing:.005em;margin-top:6px}
+.lede{margin-top:12px;max-width:60ch;color:var(--ink-2);font-size:16.5px}
+.lede b{color:var(--ink)}
+.tb{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule-strong);border:1.5px solid var(--ink-2);border-radius:4px;overflow:hidden;margin:0}
+@media (min-width:560px){.tb{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tb>div{background:var(--sheet);padding:9px 11px;min-width:0}
+.tb dd{margin:2px 0 0;font-weight:700;font-size:15.5px;line-height:1.25}
+.tb dd small{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.3}
+
+/* now panel */
+.now{display:grid;gap:18px}
+.now-top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 28px}
+.now-status{min-width:0;flex:1 1 320px}
+.now-title{font-family:var(--font-display);font-weight:700;font-size:clamp(30px,4.4vw,44px);line-height:1.02;margin-top:4px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.now-title .sw{width:16px;height:16px}
+.now-seg{font-size:17.5px;margin-top:6px}
+.now-seg .ts{font-family:var(--font-mono);font-size:15px;color:var(--ink-2);white-space:nowrap}
+.now-next{margin-top:4px;color:var(--ink-2);font-size:15.5px}
+.clock{text-align:right}
+.count{font-family:var(--font-mono);font-weight:600;font-size:clamp(46px,8vw,74px);line-height:.95;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.count-cap{font-size:14px;color:var(--muted);margin-top:5px}
+@media (max-width:560px){.clock{text-align:left}}
+.bb-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-bottom:8px;font-size:15px}
+.bb-head b{font-weight:700}
+.bb{display:grid;grid-template-columns:minmax(42px,5fr) 20fr 10fr 10fr;gap:3px}
+.bb-seg{min-width:0;display:grid;gap:5px}
+.bb-track{position:relative;height:16px;border-radius:3px;background:var(--sheet-2);overflow:hidden}
+.bb-track::before{content:"";position:absolute;inset:0;background:var(--sc);opacity:.28}
+.bb-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--sc)}
+.bb-seg.past .bb-fill,.bb.preview .bb-fill{width:100%}
+.bb-seg.cur .bb-track{outline:1.5px solid var(--ink);outline-offset:1px}
+.bb-name{font-size:clamp(11.5px,3.3vw,13px);font-weight:700;line-height:1.15;white-space:nowrap}
+.bb-seg.cur .bb-name::after{content:" ◂ now";font-weight:400;color:var(--muted)}
+.bb-time{font-family:var(--font-mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{font:inherit;font-size:14px;color:var(--ink);background:var(--sheet);border:1.5px solid var(--rule-strong);border-radius:5px;padding:6px 11px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{border-color:var(--ink-2)}
+.btn[aria-pressed="true"]{border-color:var(--ink);background:var(--sheet-2)}
+.btn .ind{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--muted);flex:none}
+.btn[aria-pressed="true"] .ind{background:var(--good);border-color:var(--good)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.tool-msg{font-size:13.5px;color:var(--muted)}
+.strip-wrap{margin:0;border-top:1px solid var(--rule);padding-top:14px}
+.strip-cap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 16px;font-size:15px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13.5px;color:var(--ink-2)}
+.legend>span{display:inline-flex;align-items:center;gap:6px}
+.legend .rest{background:var(--rest)}
+.lg-needle{display:inline-block;width:2px;height:14px;background:var(--ink)}
+.strip{position:relative;height:88px;margin-top:12px;touch-action:manipulation}
+.st-lab{position:absolute;top:0;transform:translateX(-50%);text-align:center;line-height:1.12;white-space:nowrap;pointer-events:none}
+.st-lab .i{display:block;font-family:var(--font-display);font-weight:600;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.st-lab .s{display:block;font-size:13px;font-weight:700}
+.st-bar{position:absolute;left:0;right:0;top:38px;height:24px}
+.st-seg{position:absolute;top:0;bottom:0;background:var(--sc);border-radius:2px}
+.st-seg.rest{background:var(--rest)}
+.st-seg.past{opacity:.35}
+.st-lab.rest .s{color:var(--muted)}
+.i-low{fill:none;stroke:var(--muted);stroke-width:1.6}
+.st-mark{position:absolute;top:63px;width:1px;height:5px;background:var(--rule-strong)}
+.st-tick{position:absolute;top:70px;font-family:var(--font-mono);font-size:11.5px;color:var(--muted);transform:translateX(-50%);white-space:nowrap}
+.st-tick.first{transform:none}
+.st-tick.last{transform:translateX(-100%)}
+.st-needle{position:absolute;top:34px;height:32px;width:2px;margin-left:-1px;background:var(--ink);pointer-events:none}
+.st-needle::before{content:"";position:absolute;left:50%;top:-5px;transform:translateX(-50%);border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--ink)}
+.tip{position:absolute;top:30px;transform:translate(-50%,-100%);width:max-content;max-width:100%;background:var(--ink);color:var(--sheet);font-size:13px;line-height:1.3;padding:6px 9px;border-radius:4px;pointer-events:none;z-index:2}
+
+/* rotation control */
+.rot{display:grid;gap:12px}
+@media (min-width:780px){.rot{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px 24px}}
+.segctl{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1.5px solid var(--ink);border-radius:5px;max-width:100%}
+.segctl button{font:inherit;color:var(--ink);background:transparent;border:0;padding:7px 12px;cursor:pointer;text-align:left;min-width:0}
+.segctl button+button{border-left:1.5px solid var(--ink)}
+.segctl button:first-child{border-radius:3.5px 0 0 3.5px}
+.segctl button:last-child{border-radius:0 3.5px 3.5px 0}
+.segctl button:hover:not([aria-pressed="true"]){background:var(--sheet-2)}
+.segctl button[aria-pressed="true"]{background:var(--ink);color:var(--sheet)}
+.segctl button:focus-visible{outline:2px solid var(--ink);outline-offset:2px;position:relative;z-index:1}
+.rot .segctl{width:100%}
+@media (min-width:780px){.rot .segctl{width:auto}}
+.opt-t{display:block;font-weight:700;font-size:15px}
+.opt-s{display:block;font-size:12.5px;opacity:.82;line-height:1.3}
+.segctl.small button{text-align:center;padding:5px 10px;font-family:var(--font-display);font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase}
+.pickers{display:flex;flex-wrap:wrap;gap:8px}
+
+/* two columns */
+.cols{display:grid;gap:18px;align-items:start}
+@media (min-width:980px){.cols{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}.protocol{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}}
+
+/* day plan */
+.day-title{margin-top:12px;font-size:15px;color:var(--ink-2)}
+.day-title b{color:var(--ink)}
+.tl{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.tl-block{border:1px solid var(--rule);border-radius:5px;overflow:hidden}
+.tl-head{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;padding:9px 12px;background:var(--sheet-2);border-bottom:1px solid var(--rule)}
+.tl-subj{font-weight:700;font-size:16.5px}
+.tl-grp{font-size:13px;color:var(--muted)}
+.tl-time{margin-left:auto;font-family:var(--font-mono);font-size:13.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.tl-segs{list-style:none;margin:0;padding:0}
+.tl-seg{display:grid;grid-template-columns:5.9em minmax(0,1fr) auto;gap:1px 12px;padding:7px 12px;border-top:1px solid var(--rule);align-items:baseline}
+.tl-seg:first-child{border-top:0}
+.tl-seg .t,.tl-gap .t{font-family:var(--font-mono);font-size:13.5px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tl-seg .m{font-family:var(--font-mono);font-size:13px;color:var(--muted);white-space:nowrap}
+.tl-seg .note2{grid-column:2 / -1;font-size:13.5px;color:var(--muted)}
+.tl-gap{display:grid;grid-template-columns:5.9em minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:5px 13px;color:var(--muted);font-size:14.5px}
+.is-now{background:var(--hl-wash)}
+.tl-seg.is-now .t,.tl-gap.is-now .t,.tl-gap.is-now{color:var(--ink)}
+
+/* protocol */
+.proto{list-style:none;margin:10px 0 0;padding:0}
+.proto li{display:grid;grid-template-columns:4.4em minmax(0,1fr);gap:2px 14px;padding:14px 0;border-top:1px solid var(--rule)}
+.proto li:first-child{border-top:0;padding-top:6px}
+.p-off{font-family:var(--font-mono);font-weight:600;font-size:14px;font-variant-numeric:tabular-nums;line-height:1.5}
+.p-len{display:block;font-family:var(--font-mono);font-weight:400;font-size:12.5px;color:var(--muted)}
+.proto h3{font-size:16.5px;font-weight:700;line-height:1.35}
+.proto p{color:var(--ink-2);font-size:15px;margin-top:3px}
+.proto p.sub{color:var(--muted);font-size:14px}
+
+/* tables */
+.tscroll{overflow-x:auto;margin-top:12px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%}
+.wk th,.wk td{padding:9px 10px;border-bottom:1px solid var(--rule);text-align:left;white-space:nowrap;vertical-align:middle}
+.wk thead th{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1.5px solid var(--rule-strong)}
+.wk thead th.is-today{color:var(--ink)}
+.wk .is-today{background:var(--hl-wash)}
+.wk td.is-cur{box-shadow:inset 0 0 0 2px var(--ink)}
+.wk tbody th{font-weight:400}
+.rh{display:flex;align-items:center;gap:8px}
+.rh .t{font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+.rh .w{font-size:13px;color:var(--ink-2)}
+.rh .n{font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.wk tr.lunch td{color:var(--muted);font-size:14px;background:var(--sheet-2)}
+.cell{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:15px}
+.abbr{display:none}
+@media (max-width:620px){
+.full{display:none}.abbr{display:inline}
+.wk th,.wk td{padding:8px 4px}
+.wk .cell{font-size:13.5px}
+.wk .cell .sw,.wk .rh .t{display:none}
+}
+.now-next .lbl{margin-right:6px}
+.load th,.load td{padding:9px 10px;border-bottom:1px solid var(--rule);white-space:nowrap}
+.load thead th{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:right;vertical-align:bottom;line-height:1.2;border-bottom:1.5px solid var(--rule-strong)}
+.load thead th.l{text-align:left}
+.load td{text-align:right;font-family:var(--font-mono);font-size:14px;font-variant-numeric:tabular-nums}
+.load td.subj{text-align:left;font-family:var(--font-body)}
+.load td.share{text-align:left}
+.load td.gapc{text-align:left;font-family:var(--font-body);font-size:14.5px}
+.load td.gapc span{color:var(--muted)}
+.load tfoot td{font-weight:600;border-bottom:0;border-top:1.5px solid var(--rule-strong)}
+.bar{display:inline-flex;align-items:center;gap:8px}
+.bar i{display:block;height:8px;border-radius:0 3px 3px 0;background:var(--gc)}
+.foot-note{margin-top:12px;color:var(--muted);font-size:14px;max-width:80ch}
+
+/* flags */
+.flags{list-style:none;margin:10px 0 0;padding:0}
+.flag{display:grid;grid-template-columns:136px minmax(0,1fr);gap:8px 18px;padding:16px 0;border-top:1px solid var(--rule)}
+.flag:first-child{border-top:0;padding-top:6px}
+@media (max-width:640px){.flag{grid-template-columns:minmax(0,1fr)}}
+.flag h3{font-size:17px;font-weight:700;line-height:1.35}
+.flag p{color:var(--ink-2);margin-top:5px;max-width:74ch;font-size:15.5px}
+.flag p .k{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-right:6px}
+.chip{display:inline-flex;align-items:center;gap:7px;width:fit-content;height:fit-content;font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px 3px 8px;border:1px solid var(--rule-strong);border-radius:3px;background:var(--sheet-2);color:var(--ink);white-space:nowrap}
+.chip svg{flex:none}
+.i-good{fill:none;stroke:var(--good);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.i-crit{fill:var(--crit)}
+.i-warn{fill:var(--warn)}
+.i-delta{fill:none;stroke:var(--ink-2);stroke-width:1.6;stroke-linejoin:round}
+.alt{margin-top:10px}
+.alt th,.alt td{padding:7px 10px;border-bottom:1px solid var(--rule);text-align:left;font-size:14.5px;vertical-align:top}
+.alt thead th{font-family:var(--font-display);font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border-bottom:1.5px solid var(--rule-strong);white-space:nowrap}
+.alt td.num{font-family:var(--font-mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+.alt tr.this td{background:var(--sheet-2);font-weight:700}
+
+/* footer */
+.foot{color:var(--muted);font-size:14px}
+.foot ul{margin:6px 0 0;padding-left:18px;display:grid;gap:2px}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+<header class="mast">
+<div>
+<p class="lbl">Homeschool schedule · Grade 7</p>
+<h1>7th Grade STEM Day</h1>
+<p class="lede">Five 45-minute blocks run between 9:00 and 2:00, with a 15-minute break between classes and a 30-minute lunch. Every block follows the same 5&nbsp;/&nbsp;20&nbsp;/&nbsp;10&nbsp;/&nbsp;10 split. After breaks and lunch the window holds exactly five classes, so <b>Chemistry and Biology share block&nbsp;4</b>. Every other subject meets daily.</p>
+</div>
+<dl class="tb" aria-label="Schedule constraints">
+<div><dt class="lbl">Window</dt><dd>9:00–2:00<small>300 minutes</small></dd></div>
+<div><dt class="lbl">Lunch</dt><dd>11:45–12:15<small>30 minutes</small></dd></div>
+<div><dt class="lbl">Classes</dt><dd>5 × 45 min<small>225 minutes</small></dd></div>
+<div><dt class="lbl">Breaks</dt><dd>3 × 15 min<small>45 minutes</small></dd></div>
+<div><dt class="lbl">Block split</dt><dd>5 / 20 / 10 / 10<small>review, new, review, practice</small></dd></div>
+<div><dt class="lbl">Math share</dt><dd>40%<small>450 of 1,125 class minutes a week</small></dd></div>
+</dl>
+</header>
+
+<section class="sheet now" aria-labelledby="now-title">
+<div class="now-top">
+<div class="now-status">
+<p class="lbl" id="now-when">Schedule</p>
+<h2 class="now-title" id="now-title">7th Grade STEM Day</h2>
+<p class="now-seg" id="now-seg" aria-live="polite"></p>
+<p class="now-next" id="now-next"></p>
+</div>
+<div class="clock">
+<div class="count" id="now-count"></div>
+<div class="count-cap" id="now-cap"></div>
+</div>
+</div>
+<div>
+<div class="bb-head" id="bb-head"></div>
+<div class="bb" id="bb"></div>
+</div>
+<div class="tools">
+<button type="button" class="btn" id="chime" aria-pressed="false"><span class="ind" aria-hidden="true"></span><span id="chime-t">Chime at each segment change</span></button>
+<button type="button" class="btn" id="wake" aria-pressed="false"><span class="ind" aria-hidden="true"></span><span id="wake-t">Keep screen on</span></button>
+<span class="tool-msg" id="tool-msg" role="status"></span>
+</div>
+<figure class="strip-wrap">
+<figcaption class="strip-cap">
+<span id="strip-cap"></span>
+<span class="legend" aria-hidden="true">
+<span><span class="sw" data-s="alg"></span>Algebra 1</span>
+<span><span class="sw" data-s="geo"></span>Geometry</span>
+<span><span class="sw" data-s="phy"></span>Physics</span>
+<span><span class="sw" data-s="chem"></span>Chemistry</span>
+<span><span class="sw" data-s="bio"></span>Biology</span>
+<span><span class="sw" data-s="eng"></span>English</span>
+<span><span class="sw rest"></span>Break or lunch</span>
+<span><span class="lg-needle"></span>Now</span>
+</span>
+</figcaption>
+<div class="strip" id="strip" role="img" aria-label="Day timeline"></div>
+<p class="note">Inside each block, the four stages run from the faintest shade of the subject's color to the strongest: review of last session, new material, review of today, practice.</p>
+</figure>
+</section>
+
+<section class="sheet rot" aria-labelledby="rot-h">
+<div>
+<h2 class="h2" id="rot-h">Block 4 science rotation</h2>
+<p class="note" id="rot-note"></p>
+</div>
+<div class="segctl" id="rot-ctl" role="group" aria-labelledby="rot-h">
+<button type="button" id="rot-fixed" data-mode="fixed" aria-pressed="true"><span class="opt-t">Chem-weighted</span><span class="opt-s">Chem Mon, Wed, Fri · Bio Tue, Thu</span></button>
+<button type="button" id="rot-ab" data-mode="ab" aria-pressed="false"><span class="opt-t">A/B weeks</span><span class="opt-s">Chem and Bio swap days each week</span></button>
+</div>
+</section>
+
+<div class="cols">
+<section class="sheet" aria-labelledby="day-h">
+<div class="sh">
+<h2 id="day-h">Day plan</h2>
+<div class="pickers">
+<div class="segctl small" id="week-ctl" role="group" aria-label="Week" hidden>
+<button type="button" id="wk-a" data-wk="A" aria-pressed="true">Wk A</button>
+<button type="button" id="wk-b" data-wk="B" aria-pressed="false">Wk B</button>
+</div>
+<div class="segctl small" id="day-ctl" role="group" aria-label="Day">
+<button type="button" id="day-0" aria-pressed="true">Mon</button>
+<button type="button" id="day-1" aria-pressed="false">Tue</button>
+<button type="button" id="day-2" aria-pressed="false">Wed</button>
+<button type="button" id="day-3" aria-pressed="false">Thu</button>
+<button type="button" id="day-4" aria-pressed="false">Fri</button>
+</div>
+</div>
+</div>
+<p class="note">Algebra 1, Geometry and Physics run before lunch. Physics comes after Algebra the same morning, so the algebra is fresh when Physics applies it.</p>
+<p class="day-title" id="day-title"></p>
+<ol class="tl" id="timeline"></ol>
+</section>
+
+<aside class="sheet protocol" aria-labelledby="proto-h">
+<h2 class="h2" id="proto-h">Inside every block</h2>
+<p class="note">All five blocks use the same four segments. Offsets are minutes into the block.</p>
+<ol class="proto">
+<li>
+<div class="p-off">:00–:05<span class="p-len">5 min</span></div>
+<div>
+<h3>Review: last session</h3>
+<p>Three questions on the last session's material, answered with notes closed, then checked together. Pulling material back from memory makes it last longer than rereading it does.</p>
+<p class="sub">The last session is usually yesterday. On Mondays it is Friday, and Chemistry and Biology can reach further back. Each review row in the day plan says how far.</p>
+</div>
+</li>
+<li>
+<div class="p-off">:05–:25<span class="p-len">20 min</span></div>
+<div>
+<h3>New material</h3>
+<p>One concept. Work an example, then the student works a near-identical one while you watch.</p>
+<p class="sub">Stop at :25 even mid-topic. Whatever is left opens the next session's new-material segment.</p>
+</div>
+</li>
+<li>
+<div class="p-off">:25–:35<span class="p-len">10 min</span></div>
+<div>
+<h3>Review: today</h3>
+<p>The student explains today's concept back without notes, then solves two check problems.</p>
+<p class="sub">Mistakes here set the questions for the next session's opening review.</p>
+</div>
+</li>
+<li>
+<div class="p-off">:35–:45<span class="p-len">10 min</span></div>
+<div>
+<h3>Practice</h3>
+<p>Independent work with no help. Mix in one or two problems from earlier units so older material keeps getting used.</p>
+<p class="sub">In English, practice is writing: a paragraph or a set of sentences that uses today's skill.</p>
+</div>
+</li>
+</ol>
+</aside>
+</div>
+
+<section class="sheet" aria-labelledby="week-h">
+<div class="sh"><h2 id="week-h">Week rotation</h2></div>
+<p class="note" id="wk-note"></p>
+<div class="tscroll">
+<table class="wk">
+<thead><tr id="wk-head"></tr></thead>
+<tbody id="wk-body"></tbody>
+</table>
+</div>
+</section>
+
+<section class="sheet" aria-labelledby="load-h">
+<div class="sh"><h2 id="load-h">Subject load</h2></div>
+<p class="note" id="load-note">Minutes per week, and what that adds up to over a 36-week, 180-day year.</p>
+<div class="tscroll">
+<table class="load">
+<thead>
+<tr>
+<th class="l" scope="col">Subject</th>
+<th scope="col">Blocks<br>per week</th>
+<th scope="col">Minutes<br>per week</th>
+<th class="l" scope="col">Share of<br>class time</th>
+<th scope="col">New-material<br>min per week</th>
+<th scope="col">Sessions<br>per year</th>
+<th scope="col">Hours<br>per year</th>
+<th class="l" scope="col">Longest gap<br>between sessions</th>
+</tr>
+</thead>
+<tbody id="load-body"></tbody>
+<tfoot>
+<tr><td class="subj">Total</td><td>25</td><td>1,125</td><td class="share">100%</td><td>500</td><td>900</td><td>675</td><td class="gapc"></td></tr>
+</tfoot>
+</table>
+</div>
+<p class="foot-note">For scale: a Carnegie unit, the usual measure of one high-school credit, is 120 hours of instruction. Algebra 1, Geometry, Physics and English each get 135 hours a year here.</p>
+</section>
+
+<section class="sheet" aria-labelledby="flags-h">
+<div class="sh"><h2 id="flags-h">Flags</h2></div>
+<p class="note">Where this schedule departs from the request, and what is most likely to go wrong in practice.</p>
+<ul class="flags">
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path class="i-good" d="M2 6.3l2.6 2.5L10 3.4"/></svg>Resolved</span>
+<div>
+<h3>Six 45-minute classes don't fit between 9:00 and 2:00</h3>
+<p><span class="k">Why</span>The window is 300 minutes. Three 15-minute breaks take 45 and lunch takes 30, which leaves 225 minutes, enough for exactly five classes. Six classes would need 270.</p>
+<p><span class="k">Resolution</span>Lunch is 30 minutes so the 15-minute breaks fit; a one-hour lunch would push the end to 2:30. Algebra 1, Geometry, Physics and English meet every day, and Chemistry and Biology share block 4. If all six must meet daily, one more constraint has to give:</p>
+<div class="tscroll">
+<table class="alt">
+<thead><tr><th scope="col">Option</th><th scope="col">Day ends</th><th scope="col">Gives up</th></tr></thead>
+<tbody>
+<tr class="this"><td>This schedule: five classes</td><td class="num">2:00 PM</td><td>Daily Chemistry and Biology</td></tr>
+<tr><td>Six classes</td><td class="num">3:00 PM</td><td>The 2:00 finish</td></tr>
+<tr><td>Six classes, 5-minute breaks</td><td class="num">2:20 PM</td><td>The 2:00 finish and the 15-minute breaks</td></tr>
+<tr><td>Six classes, no breaks</td><td class="num">2:00 PM</td><td>All breaks</td></tr>
+<tr><td>Six 35-minute classes (5 / 10 / 10 / 10)</td><td class="num">2:00 PM</td><td>45-minute classes and 10 minutes of new material per class</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path class="i-delta" d="M6 1.8L10.6 10.2H1.4Z"/></svg>Spec change</span>
+<div>
+<h3>“Review of previous day” became “Review: last session”</h3>
+<p><span class="k">Why</span>Chemistry and Biology don't meet every day, and nothing meets on weekends, so the previous school day's class is often a different subject. The opening review covers the last session of the same subject instead.</p>
+<p><span class="k">Effect</span>Each review row in the day plan says how far back it reaches: 1 day most of the time, 3 days on Mondays, and longer for the rotating sciences.</p>
+</div>
+</li>
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path class="i-crit" d="M6 1.2L11.2 10.6H0.8Z"/></svg>High</span>
+<div>
+<h3>Overruns eat practice or the break</h3>
+<p><span class="k">Why</span>Every minute from 9:00 to 2:00 is assigned. When new material runs long, the overrun comes out of the 10-minute practice segment, which is the only work the student does alone, or out of the 15-minute break that follows.</p>
+<p><span class="k">Fix</span>Stop new material at :25 even mid-topic and carry the rest into the next session. The chime above sounds at every segment change.</p>
+</div>
+</li>
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path class="i-crit" d="M6 1.2L11.2 10.6H0.8Z"/></svg>High</span>
+<div>
+<h3>Geometry leans on Algebra 1 skills</h3>
+<p><span class="k">Why</span>Geometry courses are usually written for students who have finished Algebra 1, and this schedule runs both at once. Angle and segment problems need multi-step equations. Coordinate geometry needs slope and linear equations. The Pythagorean theorem needs square roots and radicals.</p>
+<p><span class="k">Fix</span>Start Geometry with the units that need the least algebra, such as constructions, angle relationships and congruence. Hold each algebra-dependent unit until Algebra 1 has covered the skill it needs.</p>
+</div>
+</li>
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle class="i-warn" cx="6" cy="6" r="4.6"/></svg>Medium</span>
+<div>
+<h3>Physics needs formula rearranging</h3>
+<p><span class="k">Why</span>Quantitative physics means solving a formula like d = v·t for whichever quantity is unknown. That is solving literal equations, an early Algebra 1 topic. Algebra runs before Physics every day, but the course still has to reach that unit.</p>
+<p><span class="k">Fix</span>Open Physics with conceptual and graphical work, such as motion graphs, force diagrams and energy transfers, until Algebra 1 covers literal equations.</p>
+</div>
+</li>
+<li class="flag">
+<span class="chip" id="f6-chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle class="i-warn" cx="6" cy="6" r="4.6"/></svg>Medium</span>
+<div>
+<h3>Biology can go 5 days between sessions</h3>
+<p><span class="k">Why</span>With Chem-weighted rotation, Biology meets Tuesday and Thursday, so Tuesday's opening review reaches back 5 days to Thursday. That is the longest reach in the week.</p>
+<p><span class="k">Fix</span>A/B weeks splits block 4 evenly over two weeks and cuts the longest gap to 4 days for both sciences. The cost is 18 Chemistry sessions a year (108 down to 90). <b id="f6-state"></b></p>
+</div>
+</li>
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle class="i-warn" cx="6" cy="6" r="4.6"/></svg>Medium</span>
+<div>
+<h3>Full labs don't fit inside a block</h3>
+<p><span class="k">Why</span>A lab needs setup, procedure and cleanup. The block gives it at most the 20-minute new-material segment.</p>
+<p><span class="k">Fix</span>Use short demonstrations inside new material. Schedule full Chemistry and Biology labs after 2:00 PM.</p>
+</div>
+</li>
+<li class="flag">
+<span class="chip"><svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle class="i-low" cx="6" cy="6" r="4.2"/></svg>Low</span>
+<div>
+<h3>Movement depends on how the breaks are used</h3>
+<p><span class="k">Why</span>The three 15-minute breaks add up to 45 minutes. The <a href="https://www.cdc.gov/physical-activity-basics/guidelines/children.html">CDC recommends</a> 60 minutes or more of moderate-to-vigorous physical activity every day for ages 6 to 17.</p>
+<p><span class="k">Fix</span>Make the breaks active and away from screens, then add at least 15 active minutes after 2:00 PM.</p>
+</div>
+</li>
+</ul>
+</section>
+
+<footer class="foot">
+<p class="lbl">Assumptions</p>
+<ul>
+<li>Clock times, the countdown and "today" come from this device's clock.</li>
+<li>Year totals assume 36 weeks and 180 school days. Holidays are not modeled.</li>
+<li>In A/B weeks, Week A is the week of Monday, September 28, 2026, and weeks alternate by calendar week, including breaks.</li>
+<li>Your rotation choice is saved in this browser only.</li>
+</ul>
+</footer>
+</main>
+
+<script>
+(() => {
+"use strict";
+const DAY_START = 540, DAY_END = 840, SPAN = 300;
+const SUBJ = {
+alg:  { name: "Algebra 1", short: "Alg 1", group: "Math" },
+geo:  { name: "Geometry",  short: "Geom",  group: "Math" },
+phy:  { name: "Physics",   short: "Phys",  group: "Science" },
+chem: { name: "Chemistry", short: "Chem",  group: "Science" },
+bio:  { name: "Biology",   short: "Bio",   group: "Science" },
+eng:  { name: "English",   short: "Eng",   group: "English" }
+};
+const shade = (k, stage) => "var(--" + k + "-" + stage + ")";
+const SEGS = [
+{ name: "Review: last session", short: "Prev",         off: 0,  len: 5 },
+{ name: "New material",         short: "New material", off: 5,  len: 20 },
+{ name: "Review: today",        short: "Review",       off: 25, len: 10 },
+{ name: "Practice",             short: "Practice",     off: 35, len: 10 }
+];
+const BLOCK_START = [540, 600, 660, 735, 795];
+const SLOTS = [
+{ type: "block", b: 0, start: 540, end: 585 },
+{ type: "break", start: 585, end: 600 },
+{ type: "block", b: 1, start: 600, end: 645 },
+{ type: "break", start: 645, end: 660 },
+{ type: "block", b: 2, start: 660, end: 705 },
+{ type: "lunch", start: 705, end: 735 },
+{ type: "block", b: 3, start: 735, end: 780 },
+{ type: "break", start: 780, end: 795 },
+{ type: "block", b: 4, start: 795, end: 840 }
+];
+const LUNCH = SLOTS.find((s) => s.type === "lunch");
+const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+const DAYS_LONG = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const B4_A = ["chem", "bio", "chem", "bio", "chem"];
+const B4_B = ["bio", "chem", "bio", "chem", "bio"];
+const ANCHOR = new Date(2026, 8, 28); // Monday, Sep 28, 2026 = Week A
+const ORDER = ["alg", "geo", "phy", "chem", "bio", "eng"];
+const ICON = {
+good: '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path class="i-good" d="M2 6.3l2.6 2.5L10 3.4"/></svg>',
+warn: '<svg viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><circle class="i-warn" cx="6" cy="6" r="4.6"/></svg>'
+};
+
+const $ = (id) => document.getElementById(id);
+const store = {
+get(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },
+set(k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } }
+};
+
+/* ---------- time helpers ---------- */
+const clock = (min) => (((Math.floor(min / 60) + 11) % 12) + 1) + ":" + String(min % 60).padStart(2, "0");
+const ap = (min) => (min < 720 ? "AM" : "PM");
+const clockAP = (min) => clock(min) + " " + ap(min);
+const range = (a, b) => clock(a) + "–" + clock(b);
+const rangeAP = (a, b) => (ap(a) === ap(b) ? range(a, b) + " " + ap(b) : clockAP(a) + " – " + clockAP(b));
+const dayStart = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+const wdOf = (d) => (d.getDay() + 6) % 7; // Mon = 0 … Sun = 6
+function mondayOf(d) { const x = dayStart(d); x.setDate(x.getDate() - wdOf(x)); return x; }
+function isWeekB(d) {
+const days = Math.round((mondayOf(d) - ANCHOR) / 864e5);
+const w = Math.round(days / 7);
+return ((w % 2) + 2) % 2 === 1;
+}
+function nextSchoolDay(d) { const x = dayStart(d); do { x.setDate(x.getDate() + 1); } while (wdOf(x) > 4); return x; }
+const refSchoolDay = (d) => (wdOf(d) <= 4 ? dayStart(d) : nextSchoolDay(d));
+const fmtDate = (d) => d.toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" });
+const fmtTime = (d) => d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+function fmtCount(s) {
+s = Math.max(0, Math.round(s));
+const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+return (h ? h + ":" + String(m).padStart(2, "0") : String(m)) + ":" + String(sec).padStart(2, "0");
+}
+const fmtNum = (x) => (Number.isInteger(x) ? x.toLocaleString("en-US") : x.toFixed(1));
+
+/* ---------- schedule model ---------- */
+function lineup(mode, weekB, d) {
+const b4 = (mode === "ab" && weekB) ? B4_B[d] : B4_A[d];
+return ["alg", "geo", "phy", b4, "eng"];
+}
+function lookback(mode, weekB, d, subj) {
+const t = (weekB ? 3 : 2) * 7 + d;
+for (let k = 1; k <= 14; k++) {
+const tt = t - k, ww = Math.floor(tt / 7), dd = tt % 7;
+if (dd > 4) continue;
+if (lineup(mode, ww % 2 === 1, dd).indexOf(subj) !== -1) return { days: k, dayIdx: dd };
+}
+return null;
+}
+function stats(mode) {
+const out = {};
+ORDER.forEach((k) => { out[k] = { perWeek: [0, 0], maxGap: 0, pairs: [] }; });
+[false, true].forEach((wb) => {
+for (let d = 0; d < 5; d++) {
+lineup(mode, wb, d).forEach((s) => {
+const o = out[s];
+o.perWeek[wb ? 1 : 0]++;
+const lb = lookback(mode, wb, d, s);
+const label = DAYS[lb.dayIdx] + " → " + DAYS[d];
+if (lb.days > o.maxGap) { o.maxGap = lb.days; o.pairs = [label]; }
+else if (lb.days === o.maxGap && o.pairs.indexOf(label) === -1) o.pairs.push(label);
+});
+}
+});
+return out;
+}
+
+/* ---------- state ---------- */
+let mode = store.get("stemday.rotation") === "ab" ? "ab" : "fixed";
+let viewDay = 0, viewWeekB = false, userPicked = false;
+let lastTimeKey = null, lastKind = null;
+let chimeOn = false, audioCtx = null;
+let wakeWanted = false, wakeLock = null;
+
+function computeNow(now) {
+const wd = wdOf(now);
+const secs = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+const mins = secs / 60;
+const st = { now, wd, secs, weekB: isWeekB(now) };
+if (wd > 4) return Object.assign(st, { kind: "weekend", next: nextSchoolDay(now) });
+if (mins < DAY_START) return Object.assign(st, { kind: "before", left: DAY_START * 60 - secs });
+if (mins >= DAY_END) return Object.assign(st, { kind: "after", next: nextSchoolDay(now) });
+const si = SLOTS.findIndex((s) => mins >= s.start && mins < s.end);
+const slot = SLOTS[si];
+Object.assign(st, { kind: slot.type, si, slot });
+if (slot.type === "block") {
+const into = mins - slot.start;
+const gi = SEGS.findIndex((g) => into >= g.off && into < g.off + g.len);
+st.gi = gi;
+st.segStart = slot.start + SEGS[gi].off;
+st.segEnd = st.segStart + SEGS[gi].len;
+st.left = st.segEnd * 60 - secs;
+st.segFrac = (secs - st.segStart * 60) / (SEGS[gi].len * 60);
+} else {
+st.left = slot.end * 60 - secs;
+}
+return st;
+}
+const inDay = (k) => k === "block" || k === "break" || k === "lunch";
+const timeKey = (st) => [st.now.toDateString(), st.kind, st.si ?? "", st.gi ?? ""].join("|");
+function displayDay(st) {
+if (st.kind === "weekend" || st.kind === "after") {
+const d = st.next;
+return { date: d, wd: wdOf(d), weekB: isWeekB(d), isToday: false };
+}
+return { date: dayStart(st.now), wd: st.wd, weekB: st.weekB, isToday: true };
+}
+const weekTxt = (wb) => (mode === "ab" ? " · Week " + (wb ? "B" : "A") : "");
+
+/* ---------- now panel ---------- */
+function renderNow(st) {
+const dd = displayDay(st);
+const lu = lineup(mode, dd.weekB, dd.wd);
+let title = "", g = null, seg = "", cap = "", nextLbl = "Up next", next = "", showCount = true;
+if (st.kind === "block") {
+const S = SUBJ[lu[st.slot.b]];
+title = "B" + (st.slot.b + 1) + " · " + S.name; g = lu[st.slot.b];
+seg = SEGS[st.gi].name + ' <span class="ts">' + rangeAP(st.segStart, st.segEnd) + "</span>";
+cap = "left in this segment";
+if (st.gi < 3) next = SEGS[st.gi + 1].name + " at " + clockAP(st.segEnd);
+else if (st.si === SLOTS.length - 1) next = "The school day ends at 2:00 PM";
+else {
+const ns = SLOTS[st.si + 1], nb = SLOTS[st.si + 2];
+const then = "B" + (nb.b + 1) + " · " + SUBJ[lu[nb.b]].name + " at " + clockAP(nb.start);
+next = ns.type === "lunch" ? "Lunch at " + clockAP(ns.start) + ", then " + then
+: (ns.end - ns.start) + "-minute break, then " + then;
+}
+} else if (st.kind === "break" || st.kind === "lunch") {
+const nb = SLOTS[st.si + 1];
+title = st.kind === "lunch" ? "Lunch" : "Break";
+seg = (st.slot.end - st.slot.start) + ' minutes <span class="ts">' + rangeAP(st.slot.start, st.slot.end) + "</span>";
+cap = st.kind === "lunch" ? "left in lunch" : "left in the break";
+next = "B" + (nb.b + 1) + " · " + SUBJ[lu[nb.b]].name + " at " + clockAP(nb.start);
+} else if (st.kind === "before") {
+title = "Before school";
+seg = "The first block starts at 9:00 AM";
+cap = "until B1 · " + SUBJ[lu[0]].name;
+nextLbl = "Today" + weekTxt(dd.weekB);
+next = lu.map((k) => SUBJ[k].name).join(", ");
+} else {
+title = st.kind === "after" ? "School day done" : "No school today";
+seg = "Next school day: " + fmtDate(dd.date) + " at 9:00 AM";
+showCount = false;
+nextLbl = DAYS_LONG[dd.wd] + weekTxt(dd.weekB);
+next = lu.map((k) => SUBJ[k].name).join(", ");
+}
+$("now-title").innerHTML = (g ? '<span class="sw" data-s="' + g + '" aria-hidden="true"></span>' : "") + title;
+$("now-seg").innerHTML = seg;
+$("now-next").innerHTML = '<span class="lbl">' + nextLbl + "</span>" + next;
+$("now-count").hidden = !showCount;
+$("now-cap").hidden = !showCount;
+$("now-cap").textContent = cap;
+
+// block bar: the current block, or the next one to start
+let b = 0, current = false;
+if (st.kind === "block") { b = st.slot.b; current = true; }
+else if (st.kind === "break" || st.kind === "lunch") b = SLOTS[st.si + 1].b;
+const bk = lu[b], BS = SUBJ[bk], bStart = BLOCK_START[b];
+$("bb-head").innerHTML = '<span class="lbl">' + (current ? "This block" : "Next block") + "</span><b>B" + (b + 1) + " · " + BS.name + "</b><span>" + rangeAP(bStart, bStart + 45) + (dd.isToday ? "" : " · " + DAYS_LONG[dd.wd]) + "</span>";
+const bb = $("bb");
+bb.classList.toggle("preview", !current);
+bb.innerHTML = SEGS.map((sg, gi) => {
+const cls = current ? (gi < st.gi ? " past" : gi === st.gi ? " cur" : "") : "";
+return '<div class="bb-seg' + cls + '" style="--sc:' + shade(bk, gi + 1) + '" title="' + sg.name + ", " + sg.len + ' min"><div class="bb-track"><div class="bb-fill"></div></div><div class="bb-name">' + sg.short + '</div><div class="bb-time">' + clock(bStart + sg.off) + "</div></div>";
+}).join("");
+}
+
+/* ---------- day strip ---------- */
+function renderStrip(st) {
+const dd = displayDay(st);
+const lu = lineup(mode, dd.weekB, dd.wd);
+const pct = (m) => ((m - DAY_START) / SPAN) * 100;
+let labs = "", segs = "", ticks = "", aria = [];
+SLOTS.forEach((s) => {
+if (s.type === "block") {
+const k = lu[s.b], S = SUBJ[k];
+labs += '<div class="st-lab" style="left:' + pct(s.start + 22.5) + '%"><span class="i">B' + (s.b + 1) + '</span><span class="s">' + S.short + "</span></div>";
+aria.push("B" + (s.b + 1) + " " + S.name + " " + range(s.start, s.end));
+SEGS.forEach((g, gi) => {
+const a = s.start + g.off, e = a + g.len;
+segs += '<div class="st-seg" data-end="' + e + '" data-tip="B' + (s.b + 1) + " · " + S.name + " · " + g.name + " · " + rangeAP(a, e) + '" style="--sc:' + shade(k, gi + 1) + ";left:calc(" + pct(a) + "% + 1px);width:calc(" + (g.len / SPAN) * 100 + '% - 2px)"></div>';
+});
+} else {
+const nm = s.type === "lunch" ? "Lunch" : "Break";
+aria.push(nm + " " + range(s.start, s.end));
+segs += '<div class="st-seg rest" data-end="' + s.end + '" data-tip="' + nm + " · " + rangeAP(s.start, s.end) + '" style="left:calc(' + pct(s.start) + "% + 1px);width:calc(" + ((s.end - s.start) / SPAN) * 100 + '% - 2px)"></div>';
+if (s.type === "lunch") labs += '<div class="st-lab rest" style="left:' + pct((s.start + s.end) / 2) + '%"><span class="i">Lunch</span><span class="s">&nbsp;</span></div>';
+}
+});
+for (let h = 0; h <= 5; h++) {
+const m = DAY_START + h * 60;
+ticks += '<div class="st-mark" style="left:' + Math.min(pct(m), 99.8) + '%"></div><div class="st-tick' + (h === 0 ? " first" : h === 5 ? " last" : "") + '" style="left:' + pct(m) + '%">' + clock(m) + "</div>";
+}
+const strip = $("strip");
+strip.innerHTML = labs + '<div class="st-bar">' + segs + "</div>" + ticks + '<div class="st-needle" id="needle" hidden></div><div class="tip" id="tip" hidden></div>';
+strip.setAttribute("aria-label", DAYS_LONG[dd.wd] + " timeline: " + aria.join(", "));
+$("strip-cap").innerHTML = '<span class="lbl">' + (dd.isToday ? "Today" : "Next school day") + "</span> <b>" + fmtDate(dd.date) + weekTxt(dd.weekB) + "</b>";
+}
+function showTip(e) {
+const strip = $("strip"), tip = $("tip");
+if (!tip) return;
+const seg = e.target.closest && e.target.closest(".st-seg");
+if (!seg) { tip.hidden = true; return; }
+tip.textContent = seg.dataset.tip;
+tip.hidden = false;
+const sr = strip.getBoundingClientRect(), r = seg.getBoundingClientRect();
+const half = tip.offsetWidth / 2;
+const x = Math.max(half, Math.min(sr.width - half, r.left + r.width / 2 - sr.left));
+tip.style.left = x + "px";
+}
+
+/* ---------- rotation, day plan, week, load ---------- */
+function renderRotation(st) {
+document.querySelectorAll("#rot-ctl button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
+const S = stats(mode);
+const sess = (k) => 18 * (S[k].perWeek[0] + S[k].perWeek[1]);
+if (mode === "fixed") {
+$("rot-note").innerHTML = "Chemistry meets " + sess("chem") + " times a year and Biology " + sess("bio") + ". Biology's longest gap is " + S.bio.maxGap + " days (" + S.bio.pairs.join(", ") + ").";
+} else {
+const ref = refSchoolDay(st.now);
+$("rot-note").innerHTML = "Chemistry and Biology meet " + sess("chem") + " times a year each, and neither goes more than " + Math.max(S.chem.maxGap, S.bio.maxGap) + " days between sessions. " + (wdOf(st.now) > 4 ? "Next week" : "This week") + " is <b>Week " + (isWeekB(ref) ? "B" : "A") + "</b>.";
+}
+}
+function renderDay(st) {
+document.querySelectorAll("#day-ctl button").forEach((b, i) => b.setAttribute("aria-pressed", String(i === viewDay)));
+const wc = $("week-ctl");
+wc.hidden = mode !== "ab";
+wc.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String((b.dataset.wk === "B") === viewWeekB)));
+const wb = mode === "ab" ? viewWeekB : false;
+const lu = lineup(mode, wb, viewDay);
+const isTodayView = st.wd <= 4 && viewDay === st.wd && (mode !== "ab" || viewWeekB === st.weekB);
+const live = isTodayView && inDay(st.kind);
+$("day-title").innerHTML = "<b>" + DAYS_LONG[viewDay] + "</b>" + weekTxt(wb) + (isTodayView ? " · today" : "");
+let html = "";
+SLOTS.forEach((s, si) => {
+if (s.type === "block") {
+const k = lu[s.b], S = SUBJ[k];
+const lb = lookback(mode, wb, viewDay, k);
+const lbText = lb.days === 1 ? "Last session: yesterday (" + DAYS[lb.dayIdx] + ")" : "Last session: " + DAYS[lb.dayIdx] + ", " + lb.days + " days back";
+html += '<li class="tl-block" data-s="' + k + '"><div class="tl-head"><span class="tag">B' + (s.b + 1) + '</span><span class="sw" aria-hidden="true"></span><span class="tl-subj">' + S.name + "</span>" + (S.group !== S.name ? '<span class="tl-grp">' + S.group + "</span>" : "") + '<span class="tl-time">' + range(s.start, s.end) + '</span></div><ol class="tl-segs">';
+SEGS.forEach((g, gi) => {
+const a = s.start + g.off, e = a + g.len;
+const isNow = live && st.kind === "block" && st.si === si && st.gi === gi;
+html += '<li class="tl-seg' + (isNow ? " is-now" : "") + '"><span class="t">' + range(a, e) + '</span><span><span class="stg" style="background:' + shade(k, gi + 1) + '" aria-hidden="true"></span>' + g.name + (isNow ? ' <span class="now-tag">Now</span>' : "") + '</span><span class="m">' + g.len + " min</span>" + (gi === 0 ? '<span class="note2">' + lbText + "</span>" : "") + "</li>";
+});
+html += "</ol></li>";
+} else {
+const isNow = live && st.si === si;
+html += '<li class="tl-gap' + (isNow ? " is-now" : "") + '"><span class="t">' + range(s.start, s.end) + "</span><span>" + (s.type === "lunch" ? "Lunch" : "Break") + (isNow ? ' <span class="now-tag">Now</span>' : "") + "</span><span>" + (s.end - s.start) + " min</span></li>";
+}
+});
+$("timeline").innerHTML = html;
+}
+function renderWeek(st) {
+const todayWd = st.wd <= 4 ? st.wd : -1;
+const curBlock = st.kind === "block" ? st.slot.b : -1;
+$("wk-head").innerHTML = '<th scope="col">Block</th>' + DAYS.map((d, i) => '<th scope="col"' + (i === todayWd ? ' class="is-today" aria-current="date"' : "") + ">" + d + "</th>").join("");
+let rows = "";
+for (let b = 0; b < 5; b++) {
+if (b === 3) rows += '<tr class="lunch"><th scope="row"><span class="rh"><span class="n">Lunch</span></span></th><td colspan="5">' + range(LUNCH.start, LUNCH.end) + " · " + (LUNCH.end - LUNCH.start) + " min</td></tr>";
+const variants = (b === 3 && mode === "ab") ? [false, true] : [null];
+variants.forEach((v) => {
+const wb = v === true;
+rows += '<tr><th scope="row"><span class="rh"><span class="tag">B' + (b + 1) + '</span><span class="t">' + clock(BLOCK_START[b]) + "</span>" + (v === null ? "" : '<span class="w">Wk ' + (v ? "B" : "A") + "</span>") + "</span></th>";
+for (let d = 0; d < 5; d++) {
+const k = lineup(mode, wb, d)[b], S = SUBJ[k];
+const today = d === todayWd && (v === null || v === st.weekB);
+const cur = today && curBlock === b;
+rows += '<td class="' + (today ? "is-today" : "") + (cur ? " is-cur" : "") + '" data-s="' + k + '"><span class="cell"><span class="sw" aria-hidden="true"></span><span class="full">' + S.name + '</span><span class="abbr">' + S.short + "</span></span></td>";
+}
+rows += "</tr>";
+});
+}
+$("wk-body").innerHTML = rows;
+$("wk-note").textContent = mode === "fixed"
+? "Blocks 1, 2, 3 and 5 are the same all week. Block 4 alternates Chemistry (Mon, Wed, Fri) and Biology (Tue, Thu). Today's column is highlighted, and the running block is outlined."
+: "Blocks 1, 2, 3 and 5 are the same every week. Block 4 swaps each week: Week A has Chemistry Mon, Wed, Fri; Week B has Biology on those days. Today's column is highlighted, and the running block is outlined.";
+}
+function renderLoad() {
+const S = stats(mode);
+const pair = (a, b, f) => (a === b ? f(a) : f(a) + " / " + f(b));
+let body = "";
+ORDER.forEach((k) => {
+const s = S[k], a = s.perWeek[0], b = s.perWeek[1];
+const sessions = 18 * (a + b), hours = (sessions * 45) / 60;
+const shareAvg = (((a + b) / 2) * 45) / 1125;
+body += '<tr data-s="' + k + '"><td class="subj"><span class="cell"><span class="sw" aria-hidden="true"></span>' + SUBJ[k].name + "</span></td>" +
+"<td>" + pair(a, b, (x) => x) + "</td>" +
+"<td>" + pair(a, b, (x) => x * 45) + "</td>" +
+'<td class="share"><span class="bar"><i style="width:' + ((shareAvg / 0.2) * 56).toFixed(1) + 'px"></i><span>' + pair(a, b, (x) => Math.round(((x * 45) / 1125) * 100) + "%") + "</span></span></td>" +
+"<td>" + pair(a, b, (x) => x * 20) + "</td>" +
+"<td>" + sessions + "</td>" +
+"<td>" + fmtNum(hours) + "</td>" +
+'<td class="gapc">' + s.maxGap + " days <span>" + s.pairs.join(", ") + "</span></td></tr>";
+});
+$("load-body").innerHTML = body;
+$("load-note").textContent = mode === "fixed"
+? "Minutes per week, and what that adds up to over a 36-week, 180-day year."
+: "Minutes per week, and what that adds up to over a 36-week, 180-day year. Paired values read Week A / Week B; bars show the two-week average.";
+}
+function renderFlags() {
+const chip = $("f6-chip");
+chip.innerHTML = mode === "ab" ? ICON.good + "Mitigated" : ICON.warn + "Medium";
+$("f6-state").textContent = mode === "ab" ? "A/B weeks is on." : "";
+}
+
+function renderAll(st) {
+renderNow(st); renderStrip(st); renderRotation(st); renderDay(st); renderWeek(st); renderLoad(); renderFlags();
+updateLive(st);
+}
+function syncDefaultView(st) {
+const ref = refSchoolDay(st.now);
+viewDay = wdOf(ref);
+viewWeekB = isWeekB(ref);
+}
+
+/* ---------- per-second updates ---------- */
+function updateLive(st) {
+$("now-when").textContent = fmtDate(st.now) + " · " + fmtTime(st.now);
+if (!$("now-count").hidden && st.left != null) $("now-count").textContent = fmtCount(st.left);
+if (st.kind === "block") {
+const f = document.querySelector("#bb .bb-seg.cur .bb-fill");
+if (f) f.style.width = (Math.min(1, Math.max(0, st.segFrac)) * 100).toFixed(2) + "%";
+}
+const needle = $("needle");
+const dd = displayDay(st);
+const segs = document.querySelectorAll("#strip .st-seg");
+if (dd.isToday && st.kind !== "before") {
+const m = st.secs / 60;
+needle.hidden = false;
+needle.style.left = ((m - DAY_START) / SPAN) * 100 + "%";
+segs.forEach((el) => el.classList.toggle("past", +el.dataset.end <= m));
+} else {
+needle.hidden = true;
+segs.forEach((el) => el.classList.remove("past"));
+}
+}
+function tick() {
+const st = computeNow(new Date());
+const key = timeKey(st);
+if (key !== lastTimeKey) {
+if (lastTimeKey !== null && chimeOn && (inDay(st.kind) || (st.kind === "after" && inDay(lastKind)))) playChime();
+lastTimeKey = key; lastKind = st.kind;
+if (!userPicked) syncDefaultView(st);
+renderAll(st);
+} else {
+updateLive(st);
+}
+}
+
+/* ---------- chime and screen wake ---------- */
+const msg = (t) => { $("tool-msg").textContent = t; };
+function playChime() {
+if (!audioCtx) return;
+const t0 = audioCtx.currentTime;
+[[880, 0], [660, 0.24]].forEach(([f, dt]) => {
+const o = audioCtx.createOscillator(), gn = audioCtx.createGain();
+o.type = "sine"; o.frequency.value = f;
+gn.gain.setValueAtTime(0.0001, t0 + dt);
+gn.gain.exponentialRampToValueAtTime(0.25, t0 + dt + 0.02);
+gn.gain.exponentialRampToValueAtTime(0.0001, t0 + dt + 0.4);
+o.connect(gn); gn.connect(audioCtx.destination);
+o.start(t0 + dt); o.stop(t0 + dt + 0.45);
+});
+}
+$("chime").addEventListener("click", () => {
+chimeOn = !chimeOn;
+if (chimeOn) {
+try {
+audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
+if (audioCtx.resume) audioCtx.resume();
+playChime();
+msg("");
+} catch (e) {
+chimeOn = false;
+msg("Sound isn't available in this browser.");
+}
+}
+$("chime").setAttribute("aria-pressed", String(chimeOn));
+$("chime-t").textContent = chimeOn ? "Chime on" : "Chime at each segment change";
+});
+function syncWake() {
+$("wake").setAttribute("aria-pressed", String(wakeWanted));
+$("wake-t").textContent = wakeWanted ? "Screen stays on" : "Keep screen on";
+}
+async function requestWake() {
+try {
+wakeLock = await navigator.wakeLock.request("screen");
+wakeLock.addEventListener("release", () => { wakeLock = null; });
+msg("");
+} catch (e) {
+wakeWanted = false;
+msg("This browser didn't allow keeping the screen on.");
+}
+syncWake();
+}
+$("wake").addEventListener("click", () => {
+if (!("wakeLock" in navigator)) { msg("This browser can't keep the screen on."); return; }
+wakeWanted = !wakeWanted;
+if (wakeWanted) requestWake();
+else { if (wakeLock) wakeLock.release().catch(() => {}); wakeLock = null; syncWake(); }
+});
+document.addEventListener("visibilitychange", () => {
+if (document.visibilityState === "visible") {
+if (wakeWanted && !wakeLock) requestWake();
+tick();
+}
+});
+
+/* ---------- controls ---------- */
+document.querySelectorAll("#rot-ctl button").forEach((b) => b.addEventListener("click", () => {
+mode = b.dataset.mode;
+store.set("stemday.rotation", mode);
+renderAll(computeNow(new Date()));
+}));
+document.querySelectorAll("#day-ctl button").forEach((b, i) => b.addEventListener("click", () => {
+viewDay = i; userPicked = true;
+renderDay(computeNow(new Date()));
+}));
+document.querySelectorAll("#week-ctl button").forEach((b) => b.addEventListener("click", () => {
+viewWeekB = b.dataset.wk === "B"; userPicked = true;
+renderDay(computeNow(new Date()));
+}));
+const strip = $("strip");
+strip.addEventListener("pointermove", showTip);
+strip.addEventListener("pointerdown", showTip);
+strip.addEventListener("pointerleave", () => { const t = $("tip"); if (t) t.hidden = true; });
+
+tick();
+setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html>
